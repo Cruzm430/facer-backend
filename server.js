@@ -24,8 +24,7 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
 app.get('/', (req,res) =>{
-  knex.select('*').from('users')
-    .then(users=>res.json(users))
+  res.send('it is working')
 });
 
 app.post('/signin', (req, res) => {signIn.handleSignIn(req,res,knex,bcrypt)})
